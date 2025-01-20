@@ -34,12 +34,34 @@ Addressing the alternative path of using SSH keys:
 2) Add the public key to the `~/.ssh/authorized_keys` file on the target hosts
 3) Ensure that the private key is available on your local machine for Ansible to use
 
+Example hosts file using SSH keys:
 ```yaml
-# Example hosts file using SSH keys
-[web_servers]
-server1 ansible_ssh_user=ubuntu
-server2 ansible_ssh_user=ubuntu
+[linux]
+127.0.0.1
+
+[linux:vars] # No password necessary
+ansible_user=kali
 ```
+Generating an SSH key pair:
+```bash
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
+````
+
+- **Options Explained:**
+    - `-t rsa`: Specifies the RSA key algorithm.
+    - `-b 4096`: Creates a 4096-bit key for stronger encryption.
+    - `-f ~/.ssh/id_rsa`: Saves the key to `~/.ssh/id_rsa` (default location).
+- When prompted for a passphrase, press **Enter** twice to leave it empty for passwordless login.
+
+Copy the Public Key to the target machine.
+
+Use the `ssh-copy-id` command to copy your public key to the target machine (`127.0.0.1`):
+```bash
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@127.0.0.1
+```
+
+- Enter the password for the `kali` user when prompted.
+
 
 Ansible Vault (for Secrets Management):
 --
