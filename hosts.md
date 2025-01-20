@@ -42,6 +42,8 @@ Example hosts file using SSH keys:
 [linux:vars] # No password necessary
 ansible_user=kali
 ```
+Since we edited our Ansible hosts file (removed the hardcoded password), the SSH key will now handle authentication.
+
 Generating an SSH key pair:
 ```bash
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
@@ -66,8 +68,6 @@ Verify Key-Based Authentication and test connection using SSH:
 ssh root@127.0.0.1
 ```
 - If successful, it should log in without asking for a password.
-
-Since we edited our Ansible `hosts` file (removed the hardcoded password), the SSH key will now handle authentication.
 
 You can test this by running the Ansible ping module to test:
 ```bash
