@@ -61,7 +61,22 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@127.0.0.1
 ```
 
 - Enter the password for the `kali` user when prompted.
+- 
+Verify Key-Based Authentication and test connection using SSH:
+```bash
+ssh root@127.0.0.1
+```
+- If successful, it should log in without asking for a password.
 
+Since we edited our Ansible `hosts` file (removed the hardcoded password), the SSH key will now handle authentication.
+
+You can test this by running the Ansible ping module to test:
+```bash
+ansible -i /home/kali/ANSIBLE/hosts linux -m ping
+```
+
+You should see a successful response:
+`127.0.0.1 | SUCCESS => {     "changed": false,     "ping": "pong" }`
 
 Ansible Vault (for Secrets Management):
 --
