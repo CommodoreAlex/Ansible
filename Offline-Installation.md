@@ -1,5 +1,5 @@
 
-`# Offline Installation of Ansible for Red Hat-based Systems  
+# Offline Installation of Ansible for Red Hat-based Systems  
 
 This guide will show you how to create an offline installation of **Ansible** for a Red Hat-based system (e.g., RHEL or CentOS) in an offline environment.  
 ## Prerequisites  - A Red Hat-based Linux host (RHEL, CentOS, Fedora, etc.) in an offline environment.
