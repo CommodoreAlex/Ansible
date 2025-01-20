@@ -1,0 +1,17 @@
+# We define a hosts file with the operating system below
+[linux]
+
+# IPs here:
+192.168.1.1
+
+[linux:vars]
+ansible_user=root # Should not be root, for example purposes
+ansible_password=Password123 # Example, better practice is to avoid hardcoding a password and use secrets management.
+
+# Alternative path:
+# Set up SSH keys between local machine and the remote hosts
+# Add the publikc key to the ~/.ssh/authorized_keys file on the target hosts
+# Ensure that the private key is available on your local machine for Ansible to use
+# [web_servers]
+# server1 ansible_ssh_user=ubuntu
+# server2 ansible_ssh_user=ubuntu
