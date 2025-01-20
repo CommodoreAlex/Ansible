@@ -59,9 +59,8 @@ Use the `ssh-copy-id` command to copy your public key to the target machine (`12
 ```bash
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@127.0.0.1
 ```
-
 - Enter the password for the `kali` user when prompted.
-- 
+
 Verify Key-Based Authentication and test connection using SSH:
 ```bash
 ssh root@127.0.0.1
