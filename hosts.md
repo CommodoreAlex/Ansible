@@ -15,7 +15,7 @@ Below is an example of a hosts file with a simple method; using hard-coded crede
 # Should not be the root user; example only.
 [linux:vars]
 ansible_user=root # Should not be root, for example purposes
-ansible_password=Password123
+ansible_become_pass=Password123
 # better practice is to avoid hardcoding a password and use secrets management.
 ```
 
