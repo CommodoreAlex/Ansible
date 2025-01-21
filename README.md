@@ -1,6 +1,6 @@
 # Ansible Automation Repository
 
-This repository contains a collection of **Ansible playbooks** and **ad-hoc commands** aimed at automating administrative tasks, software management, patch management cycles, and system configurations across Linux environments. The primary objective is to simplify and standardize the management of infrastructure, ensuring consistency and repeatability across multiple systems.
+This repository contains a collection of **Ansible playbooks** and **ad-hoc commands** aimed at automating administrative tasks, software management, patch management cycles, and system configurations across Linux and Windows environments. The primary objective is to simplify and standardize the management of infrastructure, ensuring consistency and repeatability across multiple systems.
 
 ---
 
